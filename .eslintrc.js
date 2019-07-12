@@ -9,10 +9,23 @@ module.exports = {
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
+    "plugin:jest/recommended",
   ],
   settings: {
     react: {
       version: "detect",
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    "import/resolver": {
+      // use <root>/tsconfig.json
+      typescript: {},
+
+      // use <root>/path/to/folder/tsconfig.json
+      typescript: {
+        directory: ".",
+      },
     },
   },
   env: {
@@ -20,7 +33,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ["@typescript-eslint", "react"],
+  plugins: ["@typescript-eslint", "react", "import"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
