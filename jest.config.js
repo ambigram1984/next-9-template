@@ -1,5 +1,6 @@
 module.exports = {
   preset: "ts-jest",
+  testEnvironment: "jsdom",
   modulePaths: ["./"],
   testPathIgnorePatterns: [
     "<rootDir>/.next/",
@@ -8,7 +9,7 @@ module.exports = {
   ],
   globals: {
     "ts-jest": {
-      tsConfig: "tsconfig.jest.json",
+      tsConfigFile: "tsconfig.jest.json",
       babelConfig: true,
     },
   },
