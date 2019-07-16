@@ -7,7 +7,9 @@ The primary goal of this project is provide:
 
 Ideally, this project template is updated to include the latest and greatest libraries, and minimize NPM install warnings. My hope would be this project could be merged into projects built with this template to handle updates in libs.
 
-## Tooling used
+## Weak opinions 😄
+
+## Tooling used 🛠
 
 - Typescript
 - Emotion
@@ -19,19 +21,19 @@ Ideally, this project template is updated to include the latest and greatest lib
 
 # Getting Started
 
-## Tests
+## Tests 🔬
 
 Create file with `*.test.ts(x)` or add file to a directory named `__test__`
 
-## Storybook
+## Storybook 📕
 
 Use file template `*.stories.ts(x)`
 
-## Directory Structure
+## Directory Structure 📁
 
 This is purposely flat as possible to avoid configuring tools.
 
-# Hacks
+# Hacks 😭
 
 ## tsconfig.jest.json
 
