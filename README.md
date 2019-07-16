@@ -18,6 +18,7 @@ Ideally, this project template is updated to include the latest and greatest lib
 - Eslint
 - Prettier
 - VSCode (with debug configurations)
+- NVM
 
 # Getting Started
 
@@ -58,3 +59,9 @@ Next 9 currently has issues with settings the property:
 ```
 
 This issue can be tracked [here](https://github.com/zeit/next.js/issues/7779)
+
+### Why do we want this?
+
+To avoid absolute import paths, e.g.
+
+`components/Layout.tsx` is preferred to `../components/Layout.tsx`
