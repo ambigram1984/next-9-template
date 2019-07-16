@@ -9,6 +9,10 @@ Ideally, this project template is updated to include the latest and greatest lib
 
 ## Weak opinions 😄
 
+Don't link emotion? Remove it. Like semi-colons? Update the prettierc.
+
+These files in place are just meant to be present for the sake of being customized for each project.
+
 ## Tooling used 🛠
 
 - Typescript
