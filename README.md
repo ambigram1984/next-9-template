@@ -56,7 +56,3 @@ Next 9 currently has issues with settings the property:
 ```
 
 This issue can be tracked [here](https://github.com/zeit/next.js/issues/7779)
-
-# Weak Opinions
-
-Feel free to customize the eslint and prettier files to liking 😀
