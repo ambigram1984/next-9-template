@@ -23,6 +23,7 @@ These files in place are just meant to be present for the sake of being customiz
 - Prettier
 - VSCode (with debug configurations)
 - NVM
+- Webpack Bundle Analyzer
 
 # Getting Started
 
@@ -37,6 +38,10 @@ Use file template `*.stories.ts(x)`
 ## Directory Structure 📁
 
 This is purposely flat as possible to avoid configuring tools.
+
+## Analyze Bundle
+
+After running `npm run analyze`, two static files should be generated (one for server and one for browser).
 
 # Hacks 😭
 

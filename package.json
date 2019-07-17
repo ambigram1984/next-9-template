@@ -10,7 +10,8 @@
     "start": "next start",
     "debug": "NODE_OPTIONS=--inspect next",
     "test": "jest",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "analyze": "ANALYZE=true npm run-script build"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
     "next": "^9.0.0",
+    "next-compose-plugins": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
@@ -26,6 +28,7 @@
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-typescript": "^7.3.3",
+    "@next/bundle-analyzer": "^9.0.2",
     "@storybook/addon-info": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@testing-library/jest-dom": "^4.0.0",
