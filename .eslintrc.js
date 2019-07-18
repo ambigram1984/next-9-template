@@ -46,6 +46,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "import/no-default-export": "error",
+    "@typescript-eslint/explicit-member-accessibility": "off",
   },
   overrides: [
     // Override some TypeScript rules just for .js files

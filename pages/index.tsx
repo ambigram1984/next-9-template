@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout>
       <h1>
-        <ArcadeHeader1>Welcome To My Next 9 Starter Kit</ArcadeHeader1>
+        <ArcadeHeader1>Next 9 Starter Kit</ArcadeHeader1>
       </h1>
       <h2>
         <ArcadeHeader2>Check out the README!</ArcadeHeader2>
