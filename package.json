@@ -11,7 +11,8 @@
     "debug": "NODE_OPTIONS=--inspect next",
     "test": "jest",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "analyze": "ANALYZE=true npm run-script build"
+    "analyze": "ANALYZE=true npm run-script build",
+    "deploy": "now"
   },
   "keywords": [],
   "author": "",
@@ -63,6 +64,7 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "install": "^0.13.0",
     "jest": "^24.8.0",
+    "now": "^15.8.5",
     "npm": "^6.10.1",
     "prettier": "^1.18.2",
     "react-docgen-typescript-loader": "^3.1.0",

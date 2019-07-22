@@ -14,9 +14,9 @@ const typeStyles = (fontSize: number) => ({
 })
 
 export function ArcadeHeader1({ children }: React.PropsWithChildren<{}>) {
-  return <span css={typeStyles(28)}>{children}</span>
+  return <span css={typeStyles(69)}>{children}</span>
 }
 
 export function ArcadeHeader2({ children }: React.PropsWithChildren<{}>) {
-  return <span css={typeStyles(24)}>{children}</span>
+  return <span css={typeStyles(52)}>{children}</span>
 }

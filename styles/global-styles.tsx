@@ -8,6 +8,10 @@ export function GlobalStyles() {
           font-family: "ArcadeI";
           src: url("/static/fonts/ARCADEI.woff2");
         }
+
+        body {
+          background-color: skyblue;
+        }
       `}
     />
   )
