@@ -10,6 +10,7 @@ export function Header() {
         backgroundColor: "darkorchid",
       }}
     >
+      {/* test comment */}
       <Link href="/">
         <a>
           <SegaLogo />

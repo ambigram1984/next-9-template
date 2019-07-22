@@ -10,8 +10,11 @@ export default function Home() {
       </h1>
       <img src="/static/images/windows-95.png" />
       <h2>
-        <ArcadeHeader2>Check out the README!</ArcadeHeader2>
+        <ArcadeHeader2>Check out dat README!</ArcadeHeader2>
       </h2>
+      <Link href="/about">
+        <a>About page.</a>
+      </Link>
     </Layout>
   )
 }
