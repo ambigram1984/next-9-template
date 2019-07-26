@@ -28,6 +28,10 @@ These files in place are just meant to be present for the sake of being customiz
 
 # Getting Started
 
+## SEO
+
+This project uses `next-seo` to handle SEO requirements.
+
 ## Tests 🔬
 
 Create file with `*.test.ts(x)` or add file to a directory named `__test__`
