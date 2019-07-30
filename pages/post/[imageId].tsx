@@ -1,6 +1,5 @@
 import React from "react"
-import { NextApiRequest, NextPageContext } from "next"
-import { string } from "prop-types"
+import { NextPageContext } from "next"
 import { ArcadeHeader1 } from "../../styles/typography"
 
 interface ImagePostProps {
