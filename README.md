@@ -25,6 +25,9 @@ These files in place are just meant to be present for the sake of being customiz
 - NVM
 - Webpack Bundle Analyzer
 - SVGR (Convert SVGs into React components)
+- Next SEO for managing SEO optimizations
+- next-image-optimization to handle images
+- next-fonts for loading custom fonts
 
 # Getting Started
 
@@ -93,3 +96,7 @@ There are issues with adding the emotion babel preset. To work around this, the 
 ```
 
 at the top of each file.
+
+## Custom.d.ts
+
+Used to help ts deal with importing assets like images which webpack handles.

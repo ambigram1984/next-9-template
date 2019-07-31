@@ -2,6 +2,7 @@ import { Layout } from "../components/Layout/Layout"
 import Link from "next/link"
 import { ArcadeHeader1, ArcadeHeader2 } from "../styles/typography"
 import { NextSeo } from "next-seo"
+import WindowsLogo from "../static/images/windows-95.png"
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <h1>
         <ArcadeHeader1>Next 9 Starter Kit</ArcadeHeader1>
       </h1>
-      <img src="/static/images/windows-95.png" />
+      <img src={WindowsLogo} />
       <h2>
         <ArcadeHeader2>Check out dat README!</ArcadeHeader2>
       </h2>

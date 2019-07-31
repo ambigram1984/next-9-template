@@ -1,10 +1,20 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+/* eslint-disable */
+
 interface SvgrComponent
   extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
 
 declare module "*.svg" {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const content: any
-  // eslint-disable-next-line import/no-default-export
   export default content
+}
+
+declare module "*.css" {
+  export default "" as string
+}
+declare module "*.png" {
+  export default "" as string
+}
+
+declare module "*.jpg" {
+  export default "" as string
 }
