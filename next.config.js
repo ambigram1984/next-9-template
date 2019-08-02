@@ -25,6 +25,9 @@ module.exports = withPlugins(
       {
         handleImages: ["jpeg", "png"],
         optimizeImagesInDev: true,
+        mozjpeg: {
+          progressive: false,
+        },
       },
     ],
   ],
