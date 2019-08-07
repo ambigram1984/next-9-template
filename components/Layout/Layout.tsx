@@ -4,10 +4,10 @@ import { Header } from "../Header/Header"
 
 export function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
-    <div>
+    <>
       <Header />
       <GlobalStyles />
-      {children}
-    </div>
+      <main>{children}</main>
+    </>
   )
 }

@@ -1,6 +1,6 @@
 //** @jsx jsx */
 import { jsx, css } from "@emotion/core"
-import { useState, useReducer, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback, SyntheticEvent } from "react"
 
 interface ImageProps {
   src: string
@@ -29,18 +29,13 @@ const mainImgCss = (isLoaded?: boolean) =>
 
 export function LazyImage(props: ImageProps) {
   const [isMainImgLoaded, setMainImgLoaded] = useState(false)
-  const mainImgRef = useRef<HTMLImageElement>(null)
 
-  useEffect(() => {
-    if (mainImgRef.current && mainImgRef.current.complete) {
+  // Minimum time to show placeholder if img not loaded.
+  const isCompletedRef = useCallback((node: HTMLImageElement | null) => {
+    if (node && node.complete) {
       setMainImgLoaded(true)
-      // mainImgRef.current.onload = () => setMainImgLoaded(true)
     }
   }, [])
-
-  const handleImageLoaded = () => {
-    setMainImgLoaded(true)
-  }
 
   return (
     <div
@@ -59,6 +54,7 @@ export function LazyImage(props: ImageProps) {
           css={imgCss}
           src={props.placeholderSrc}
           alt={props.altTxt}
+          aria-hidden
           tabIndex={-1}
         />
       ) : null}
@@ -66,8 +62,10 @@ export function LazyImage(props: ImageProps) {
         css={mainImgCss(isMainImgLoaded)}
         src={props.src}
         alt={props.altTxt}
-        ref={mainImgRef}
-        onLoad={handleImageLoaded}
+        onLoad={(e: SyntheticEvent<HTMLImageElement>) => {
+          // showMainImg(!e.currentTarget.complete)
+          setMainImgLoaded(true)
+        }}
       />
     </div>
   )

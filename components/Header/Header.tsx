@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function Header() {
   return (
-    <div
+    <nav
       css={{
         backgroundColor: "darkorchid",
       }}
@@ -18,6 +18,9 @@ export function Header() {
       <Link href="/about">
         <a>About page.</a>
       </Link>
-    </div>
+      <Link href="/hello">
+        <a>Hello page.</a>
+      </Link>
+    </nav>
   )
 }
