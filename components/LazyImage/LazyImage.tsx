@@ -62,8 +62,9 @@ export function LazyImage(props: ImageProps) {
         css={mainImgCss(isMainImgLoaded)}
         src={props.src}
         alt={props.altTxt}
+        ref={isCompletedRef}
         onLoad={(e: SyntheticEvent<HTMLImageElement>) => {
-          // showMainImg(!e.currentTarget.complete)
+          console.log("load")
           setMainImgLoaded(true)
         }}
       />

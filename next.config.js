@@ -10,7 +10,7 @@ const nextConfig = {
   webpack: config => {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      use: ["@svgr/webpack"], // Handles converting svgs to react components.
     })
     return config
   },
@@ -23,8 +23,7 @@ module.exports = withPlugins(
     [
       withOptimizedImages,
       {
-        handleImages: ["jpeg", "png"],
-        optimizeImagesInDev: true,
+        handleImages: ["jpeg", "png"], // Manually specify so SVGR does not break
         mozjpeg: {
           progressive: false,
         },
