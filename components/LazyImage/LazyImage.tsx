@@ -1,6 +1,7 @@
 //** @jsx jsx */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { jsx, css } from "@emotion/core"
-import { useState, useRef, useEffect, useCallback, SyntheticEvent } from "react"
+import { useState, useCallback } from "react"
 
 interface ImageProps {
   src: string
@@ -63,7 +64,7 @@ export function LazyImage(props: ImageProps) {
         src={props.src}
         alt={props.altTxt}
         ref={isCompletedRef}
-        onLoad={(e: SyntheticEvent<HTMLImageElement>) => {
+        onLoad={() => {
           setMainImgLoaded(true)
         }}
       />

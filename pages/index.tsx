@@ -15,12 +15,12 @@ export default function Home() {
         <h1>
           <ArcadeHeader1>Next 9 Starter Kit</ArcadeHeader1>
         </h1>
-        <img src={WindowsLogo} />
+        <img src={WindowsLogo} alt="Windows logo" />
         <h2>
           <ArcadeHeader2>Check out dat README!</ArcadeHeader2>
         </h2>
         <Link href="/about">
-          <a>About page.</a>
+          <a href="/about">About page.</a>
         </Link>
       </section>
     </Layout>

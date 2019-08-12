@@ -95,8 +95,26 @@ There are issues with adding the emotion babel preset. To work around this, the 
 /** @jsx jsx */
 ```
 
+This also requires importing jsx from emotion and disabling `@typescript-eslint/no-unused-vars`:
+
+```js
+import { jsx } from "@emotion/core"
+```
+
+This is a pain but I think easier than maintaining a babel configuration.
+
 at the top of each file.
 
 ## Custom.d.ts
 
 Used to help ts deal with importing assets like images which webpack handles.
+
+# Known console errors
+
+## NPM Install security vulnerabilities
+
+These are mostly for SVGR and storybook dependencies which are not used production.
+
+## LoadableComponent.tsx, componentWillMount is depricated
+
+This is currently being addressed by the NextJS team https://github.com/zeit/next.js/issues/8310

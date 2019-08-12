@@ -10,6 +10,7 @@ module.exports = {
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:jest/recommended",
+    "plugin:jsx-a11y/strict",
   ],
   settings: {
     react: {
@@ -33,7 +34,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ["@typescript-eslint", "react", "import"],
+  plugins: ["@typescript-eslint", "react", "import", "jsx-a11y"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -52,6 +53,12 @@ module.exports = {
     // Override some TypeScript rules just for .js files
     {
       files: ["*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+    {
+      files: ["./utils/react-axe-wrapper.tsx"],
       rules: {
         "@typescript-eslint/no-var-requires": "off",
       },
