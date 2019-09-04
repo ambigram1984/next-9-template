@@ -11,6 +11,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:jest/recommended",
     "plugin:jsx-a11y/strict",
+    "plugin:cypress/recommended",
   ],
   settings: {
     react: {
@@ -33,8 +34,9 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    "cypress/globals": true,
   },
-  plugins: ["@typescript-eslint", "react", "import", "jsx-a11y"],
+  plugins: ["@typescript-eslint", "react", "import", "jsx-a11y", "cypress"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

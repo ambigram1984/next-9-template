@@ -20,7 +20,9 @@ export default function Home() {
           <ArcadeHeader2>Check out dat README!</ArcadeHeader2>
         </h2>
         <Link href="/about">
-          <a href="/about">About page.</a>
+          <a href="/about" data-testid="about-page">
+            About page.
+          </a>
         </Link>
       </section>
     </Layout>

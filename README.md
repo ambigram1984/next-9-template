@@ -18,6 +18,7 @@ These files in place are just meant to be present for the sake of being customiz
 - Typescript
 - Emotion
 - Jest (with React Testing Library)
+- Cypress (with Cypress Testing Library)
 - Storybook
 - Eslint
 - Prettier
@@ -108,6 +109,10 @@ at the top of each file.
 ## Custom.d.ts
 
 Used to help ts deal with importing assets like images which webpack handles.
+
+## ts-check in cypress tests
+
+TODO: Set up typescript compiliaton for running cypress tests.
 
 # Known console errors
 
