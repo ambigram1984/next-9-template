@@ -4,11 +4,7 @@ import { SegaLogo } from "../Icons/Icons"
 import { jsx } from "@emotion/core"
 import { Link } from "../../utils/Link"
 
-const Themes = {
-  DARK: "dark",
-}
-
-export function Header(props: any) {
+export function Header() {
   return (
     <header>
       <nav
