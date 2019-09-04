@@ -2,5 +2,5 @@
 import SegaLogoSVG from "../../static/svg/sega.svg"
 
 export function SegaLogo(props: React.SVGAttributes<SVGElement>) {
-  return <SegaLogoSVG {...props} />
+  return <SegaLogoSVG title={"Sega Logo"} {...props} />
 }

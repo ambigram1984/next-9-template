@@ -1,10 +1,12 @@
 /* eslint-disable */
 
 interface SvgrComponent
-  extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+  extends React.StatelessComponent<
+    React.SVGAttributes<SVGElement> & { title: string }
+  > {}
 
 declare module "*.svg" {
-  const content: any
+  const content: SvgrComponent
   export default content
 }
 

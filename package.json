@@ -15,6 +15,7 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "analyze": "ANALYZE=true npm run-script build",
+    "lint": "eslint --fix --ext .js,.ts,.tsx ./",
     "deploy": "now"
   },
   "keywords": [],

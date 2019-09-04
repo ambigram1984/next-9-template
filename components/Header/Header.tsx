@@ -1,26 +1,27 @@
 //** @jsx jsx */
 import { SegaLogo } from "../Icons/Icons"
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { jsx } from "@emotion/core"
-import Link from "next/link"
+import { Link } from "../../utils/Link"
 
-export function Header() {
+const Themes = {
+  DARK: "dark",
+}
+
+export function Header(props: any) {
   return (
-    <nav
-      css={{
-        backgroundColor: "darkorchid",
-      }}
-    >
-      <Link href="/">
-        <a>
+    <header>
+      <nav
+        css={{
+          backgroundColor: "darkorchid",
+        }}
+      >
+        <Link href="/">
           <SegaLogo />
-        </a>
-      </Link>
-      <Link href="/about">
-        <a>About page.</a>
-      </Link>
-      <Link href="/hello">
-        <a>Hello page.</a>
-      </Link>
-    </nav>
+        </Link>
+        <Link href="/about">About page.</Link>
+        <Link href="/hello">Hello page.</Link>
+      </nav>
+    </header>
   )
 }

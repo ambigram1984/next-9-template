@@ -1,5 +1,5 @@
 import { ArcadeHeader1 } from "../styles/typography"
-import Link from "next/link"
+import { Link } from "../utils/Link"
 
 export default function Hello() {
   return (
@@ -9,23 +9,17 @@ export default function Hello() {
       </h1>
       <ul>
         <li>
-          <Link href="/hello/tyler">
-            <a>Tyler</a>
-          </Link>
+          <Link href="/hello/tyler">Tyler</Link>
         </li>
         <li>
-          <Link href="/hello/world">
-            <a>World</a>
-          </Link>
+          <Link href="/hello/world">World</Link>
         </li>
         <li>
-          <Link href="hello/there">
-            <a>General Kenobi</a>
-          </Link>
+          <Link href="hello/there">General Kenobi</Link>
         </li>
         <li>
           <Link href="hello/moto">
-            <a>Moto</a>
+            <button>Moto</button>
           </Link>
         </li>
       </ul>
