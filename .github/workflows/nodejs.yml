@@ -26,15 +26,6 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm ci
+        npm test
       env:
         CI: true
-        
-  unitTest:
-    runs-on: [ubuntu-latest]
-    strategy:
-      matrix:
-        node-version: [12.x]
-    needs: install
-    steps:
-      - run: |
-          npm test
