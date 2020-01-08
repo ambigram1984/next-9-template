@@ -123,3 +123,14 @@ These are mostly for SVGR and storybook dependencies which are not used producti
 ## LoadableComponent.tsx, componentWillMount is depricated
 
 This is currently being addressed by the NextJS team https://github.com/zeit/next.js/issues/8310
+
+## Storybook webpack config
+
+There is the normal typescript riga-mah-roll; however there's this interesting bit
+
+```js
+const fileLoaderRule = config.module.rules.find(rule => rule.test.test(".svg"))
+fileLoaderRule.exclude = /\.svg$/
+```
+
+This handles getting the `@svgr/webpack` loader to work for storybook.
