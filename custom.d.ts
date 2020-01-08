@@ -1,4 +1,5 @@
 /* eslint-disable */
+import "jest-dom/extend-expect"
 
 interface SvgrComponent
   extends React.StatelessComponent<
@@ -14,7 +15,8 @@ declare module "*.css" {
   export default "" as string
 }
 declare module "*.png" {
-  export default "" as string
+  const value: any
+  export = value
 }
 
 declare module "*.jpg" {
