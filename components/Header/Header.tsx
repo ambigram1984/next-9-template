@@ -1,4 +1,5 @@
 //** @jsx jsx */
+import * as React from "react"
 import { SegaLogo } from "../Icons/Icons"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { jsx } from "@emotion/core"
