@@ -6,7 +6,7 @@
 
 interface SvgrComponent
   extends React.StatelessComponent<
-    React.SVGAttributes<SVGElement> & { title: string }
+    React.SVGAttributes<SVGElement> & { title: string } // Force all SVGR components to have title attribute for a11y
   > {}
 
 declare module "*.svg" {
