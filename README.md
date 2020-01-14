@@ -54,7 +54,7 @@ After running `npm run analyze`, two static files should be generated (one for s
 
 ## Icons
 
-This project uses the webpack plugin (SVGR)[https://github.com/smooth-code/svgr/tree/master/packages/webpack] to convert svgs to React components. Just add SVGs to `static/svgs/`. It's recommended to wrap these instead of importing them directly to decouple the rest of the prjoect from svgr.
+This project uses the webpack plugin (SVGR)[https://github.com/smooth-code/svgr/tree/master/packages/webpack] to convert svgs to React components. Just add SVGs to `public/svgs/`. It's recommended to wrap these instead of importing them directly to decouple the rest of the prjoect from svgr.
 
 # Hacks 😭
 

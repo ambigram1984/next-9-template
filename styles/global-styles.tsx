@@ -9,7 +9,7 @@ export function GlobalStyles() {
         ${emotionReset}
         @font-face {
           font-family: "ArcadeI";
-          src: url("/static/fonts/ARCADEI.woff2");
+          src: url("/public/fonts/ARCADEI.woff2");
         }
 
         body {

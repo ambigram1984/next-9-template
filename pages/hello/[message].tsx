@@ -8,7 +8,6 @@ interface HelloMessageProps {
 
 export default class ImagePost extends React.Component<HelloMessageProps> {
   static async getInitialProps({ query }: NextPageContext) {
-    // pid = 'hello-nextjs'
     const { message } = query
 
     return { message }

@@ -1,7 +1,7 @@
 import { ArcadeHeader1 } from "../styles/typography"
 import { Layout } from "../components/Layout/Layout"
 // eslint-disable-next-line import/no-unresolved
-import City from "../static/images/city.jpg?trace"
+import City from "../public/images/city.jpg?trace"
 import { LazyImage } from "../components/LazyImage/LazyImage"
 
 export default function About() {

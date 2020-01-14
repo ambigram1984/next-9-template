@@ -2,7 +2,7 @@ import { Layout } from "../components/Layout/Layout"
 import Link from "next/link"
 import { ArcadeHeader1, ArcadeHeader2 } from "../styles/typography"
 import { NextSeo } from "next-seo"
-import WindowsLogo from "../static/images/windows-95.png"
+import WindowsLogo from "../public/images/windows-95.png"
 
 export default function Home() {
   return (
