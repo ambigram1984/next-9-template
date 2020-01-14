@@ -114,6 +114,9 @@ Used to help ts deal with importing assets like images which webpack handles.
 
 TODO: Set up typescript compiliaton for running cypress tests.
 
+_HECK_: When trying to set this up quickly, it created type conflict with `jest-testing-library` types:
+https://github.com/cypress-io/cypress/issues/1087
+
 # Known console errors
 
 ## NPM Install security vulnerabilities
