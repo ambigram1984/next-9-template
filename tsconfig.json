@@ -13,7 +13,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": ["cypress", "@types/testing-library__cypress"]
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx", "cypress/integration/home/home.js"]
