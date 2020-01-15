@@ -106,9 +106,9 @@ This is a pain but I think easier than maintaining a babel configuration.
 
 at the top of each file.
 
-## Custom.d.ts
+## next-env.d.ts
 
-Used to help ts deal with importing assets like images which webpack handles.
+Adds custom type definitions
 
 ## ts-check in cypress tests
 
