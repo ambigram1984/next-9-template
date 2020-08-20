@@ -12,6 +12,7 @@ export default function Home() {
         description="Starter template for Next 9"
       />
       <section>
+        <a href="http://www.google.com">Google Link</a>
         <h1>
           <ArcadeHeader1>Next 9 Starter Kit</ArcadeHeader1>
         </h1>

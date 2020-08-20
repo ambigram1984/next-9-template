@@ -4,15 +4,19 @@ context("Example of testing the home page", () => {
   })
 
   it("finds the home link", () => {
-    cy.getByText("Hello page.")
+    cy.findByText("Hello page.")
   })
 
   it("finds the about links", () => {
-    cy.getByTestId("about-page")
-    cy.getAllByText("About page.")
+    cy.findByTestId("about-page")
+    cy.findAllByText("About page.")
   })
 
   it("finds the readme text", () => {
-    cy.getByText("Check out dat README!")
+    cy.findByText("Check out dat README!")
+  })
+
+  it("can link to google", () => {
+    cy.findByText("Google Link").click()
   })
 })
