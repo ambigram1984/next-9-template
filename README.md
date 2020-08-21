@@ -70,62 +70,14 @@ Currently `ts-jest` has issues when setting:
 
 To fix this, `tsconfig.jest.json` is used to handle writing typescript in `*.test.ts(x)` files.
 
-## Next 9 Does not currently support baseUrl
-
-Next 9 currently has issues with settings the property:
-
-```json
-  "compilerOptions": {
-    "baseUrl": ".",
-  }
-```
-
-This issue can be tracked [here](https://github.com/zeit/next.js/issues/7779)
-
-### Why do we want this?
-
-To avoid absolute import paths, e.g.
-
-`components/Layout.tsx` is preferred to `../components/Layout.tsx`
-
-## Emotion JSX Pragma
-
-There are issues with adding the emotion babel preset. To work around this, the pragma method is used which requires:
-
-```js
-/** @jsx jsx */
-```
-
-This also requires importing jsx from emotion and disabling `@typescript-eslint/no-unused-vars`:
-
-```js
-import { jsx } from "@emotion/core"
-```
-
-This is a pain but I think easier than maintaining a babel configuration.
-
-at the top of each file.
-
 ## next-env.d.ts
 
-Adds custom type definitions
+Adds custom type definitions (Mostly for svgr; webpack loaders)
 
 ## ts-check in cypress tests
 
-TODO: Set up typescript compiliaton for running cypress tests.
-
 _HECK_: When trying to set this up quickly, it created type conflict with `jest-testing-library` types:
 https://github.com/cypress-io/cypress/issues/1087
-
-# Known console errors
-
-## NPM Install security vulnerabilities
-
-These are mostly for SVGR and storybook dependencies which are not used production.
-
-## LoadableComponent.tsx, componentWillMount is depricated
-
-This is currently being addressed by the NextJS team https://github.com/zeit/next.js/issues/8310
 
 ## Storybook webpack config
 
@@ -137,3 +89,9 @@ fileLoaderRule.exclude = /\.svg$/
 ```
 
 This handles getting the `@svgr/webpack` loader to work for storybook.
+
+# Known console errors
+
+## NPM Install security vulnerabilities
+
+These are mostly for SVGR and storybook dependencies which are not used production.

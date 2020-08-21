@@ -15,8 +15,4 @@ context("Example of testing the home page", () => {
   it("finds the readme text", () => {
     cy.findByText("Check out dat README!")
   })
-
-  it("can link to google", () => {
-    cy.findByText("Google Link").click()
-  })
 })
