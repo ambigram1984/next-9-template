@@ -74,24 +74,19 @@ To fix this, `tsconfig.jest.json` is used to handle writing typescript in `*.tes
 
 Adds custom type definitions (Mostly for svgr; webpack loaders)
 
-## ts-check in cypress tests
-
-_HECK_: When trying to set this up quickly, it created type conflict with `jest-testing-library` types:
-https://github.com/cypress-io/cypress/issues/1087
-
 ## Storybook webpack config
 
 There is the normal typescript riga-mah-roll; however there's this interesting bit
 
 ```js
-const fileLoaderRule = config.module.rules.find(rule => rule.test.test(".svg"))
+const fileLoaderRule = config.module.rules.find((rule) =>
+  rule.test.test(".svg")
+)
 fileLoaderRule.exclude = /\.svg$/
 ```
 
 This handles getting the `@svgr/webpack` loader to work for storybook.
 
-# Known console errors
+# TODO:
 
-## NPM Install security vulnerabilities
-
-These are mostly for SVGR and storybook dependencies which are not used production.
+- Update cypress tests to use typescript

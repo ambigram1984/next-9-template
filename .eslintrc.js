@@ -71,5 +71,11 @@ module.exports = {
         "@typescript-eslint/explicit-module-boundary-types": "off",
       },
     },
+    {
+      files: ["./cypress/**/*.spec.js"],
+      rules: {
+        "jest/expect-expect": "off",
+      },
+    },
   ],
 }
