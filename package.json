@@ -15,9 +15,10 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "analyze": "ANALYZE=true npm run-script build",
-    "lint": "eslint --fix --ext .js,.ts,.tsx ./",
+    "lint": "eslint --ext .js,.ts,.tsx ./",
     "deploy": "now",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "ci:verify": "concurrenlty 'npm:build' 'npm:test' 'npm:verify'"
   },
   "keywords": [],
   "author": "",
@@ -67,6 +68,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-emotion": "^10.0.33",
     "babel-preset-react-app": "^9.1.2",
+    "concurrently": "^5.3.0",
     "cypress": "^5.0.0",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
