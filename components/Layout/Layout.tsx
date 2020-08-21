@@ -4,7 +4,7 @@ import { Header } from "components/Header/Header"
 
 export function Layout({
   children,
-}: React.PropsWithChildren<{ backgroundColor?: string }>) {
+}: React.PropsWithChildren<{ backgroundColor?: string }>): React.ReactElement {
   return (
     <>
       <Header />

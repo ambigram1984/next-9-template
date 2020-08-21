@@ -21,12 +21,8 @@ module.exports = {
       "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
-      // use <root>/tsconfig.json
-      typescript: {},
-
-      // use <root>/path/to/folder/tsconfig.json
       typescript: {
-        directory: ".",
+        directory: ".", // Path to typescript config
       },
     },
   },
@@ -41,15 +37,13 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
     sourceType: "module", // Allows for the use of imports
   },
   rules: {
     "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
     "import/no-default-export": "error",
-    "@typescript-eslint/explicit-member-accessibility": "off",
   },
   overrides: [
     // Override some TypeScript rules just for .js files
@@ -69,6 +63,12 @@ module.exports = {
       files: ["./pages/**/*.tsx"],
       rules: {
         "import/no-default-export": "off",
+      },
+    },
+    {
+      files: ["**/*.tsx"],
+      rules: {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
       },
     },
   ],

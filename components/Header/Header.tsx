@@ -3,9 +3,9 @@ import * as React from "react"
 import { SegaLogo } from "../Icons/Icons"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { jsx } from "@emotion/core"
-import { Link } from "../../utils/Link"
+import { Link } from "utils/Link"
 
-export function Header() {
+export function Header(): React.ReactElement {
   return (
     <header>
       <nav

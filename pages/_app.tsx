@@ -4,9 +4,9 @@ import dynamic from "next/dynamic"
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
-    const ReactAxeWrapper = dynamic<{}>(
+    const ReactAxeWrapper = dynamic<unknown>(
       () =>
-        import("../utils/react-axe-wrapper").then(mod => mod.ReactAxeWrapper),
+        import("../utils/react-axe-wrapper").then((mod) => mod.ReactAxeWrapper),
       {
         ssr: false,
       }

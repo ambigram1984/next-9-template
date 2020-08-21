@@ -18,7 +18,7 @@
     "lint": "eslint --ext .js,.ts,.tsx ./",
     "deploy": "now",
     "cypress": "cypress open",
-    "ci:verify": "concurrenlty 'npm:build' 'npm:test' 'npm:verify'"
+    "ci:verify": "concurrently 'npm:build' 'npm:test' 'npm:lint'"
   },
   "keywords": [],
   "author": "",
