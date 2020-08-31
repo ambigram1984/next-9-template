@@ -90,3 +90,4 @@ This handles getting the `@svgr/webpack` loader to work for storybook.
 # TODO:
 
 - Update cypress tests to use typescript
+- Storybook is broke after bumping deps
