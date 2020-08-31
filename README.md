@@ -91,3 +91,4 @@ This handles getting the `@svgr/webpack` loader to work for storybook.
 
 - Update cypress tests to use typescript
 - Storybook is broke after bumping deps
+- Check if `tsconfig.jest.json` is still needed.
