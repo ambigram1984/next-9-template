@@ -91,3 +91,5 @@ This handles getting the `@svgr/webpack` loader to work for storybook.
 
 - Update cypress tests to use typescript
 - Fix storybook
+- Is `tsconfig.jest.json` still needed?
+- Is `jest-setup.ts` still needed to support testing-library types for jest?
