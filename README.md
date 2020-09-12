@@ -58,6 +58,10 @@ This project uses the webpack plugin (SVGR)[https://github.com/smooth-code/svgr/
 
 # Hacks 😭
 
+## jest-config.js
+
+This file imports types for testing library
+
 ## tsconfig.jest.json
 
 Currently `ts-jest` has issues when setting:
@@ -113,5 +117,3 @@ export const decorators = [withEmotion]
 # TODO:
 
 - Update cypress tests to use typescript
-- Is `tsconfig.jest.json` still needed?
-- Is `jest-setup.ts` still needed to support testing-library types for jest?
