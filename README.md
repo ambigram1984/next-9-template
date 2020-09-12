@@ -113,6 +113,5 @@ export const decorators = [withEmotion]
 # TODO:
 
 - Update cypress tests to use typescript
-- Get emotion working with storybook
 - Is `tsconfig.jest.json` still needed?
 - Is `jest-setup.ts` still needed to support testing-library types for jest?
