@@ -72,7 +72,7 @@ module.exports = {
       },
     },
     {
-      files: ["./cypress/**/*.spec.js"],
+      files: ["./cypress/**/*.spec.ts"],
       rules: {
         "jest/expect-expect": "off",
       },

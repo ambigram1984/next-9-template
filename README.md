@@ -58,6 +58,10 @@ This project uses the webpack plugin (SVGR)[https://github.com/smooth-code/svgr/
 
 # Hacks 😭
 
+## Typescript for Cypress
+
+Cypress [recommends](https://docs.cypress.io/guides/tooling/typescript-support.html#Configure-tsconfig-json) using a seperate tsconfig in the `cypress` directory for writing tests in typescript.
+
 ## jest-config.js
 
 This file imports types for testing library
