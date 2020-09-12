@@ -74,9 +74,9 @@ To fix this, `tsconfig.jest.json` is used to handle writing typescript in `*.tes
 
 Adds custom type definitions (Mostly for svgr; webpack loaders)
 
-## Storybook webpack config
+## Storybook config
 
-There is the normal typescript riga-mah-roll; however there's this interesting bit
+This handles getting the `@svgr/webpack` loader to work for storybook.
 
 ```js
 const fileLoaderRule = config.module.rules.find((rule) =>
@@ -85,11 +85,34 @@ const fileLoaderRule = config.module.rules.find((rule) =>
 fileLoaderRule.exclude = /\.svg$/
 ```
 
-This handles getting the `@svgr/webpack` loader to work for storybook.
+There is currently an open issue with core-js 3 and storybook 6. This issue can be tracked [here](https://github.com/storybookjs/storybook/issues/11255). The temporary work-around is this part of the Storybook webpack config
+
+```javascript
+config.resolve.alias["core-js/modules"] = path.resolve(
+  __dirname,
+  "..",
+  "node_modules/@storybook/core/node_modules/core-js/modules"
+)
+```
+
+Storybook does not currently support typescript baseUrls. The `tsconfig-paths-webpack-plugin` was added to support this.
+
+In order for emotion's global styles to work; the following lines were added to `.storybook/preview.js`
+
+```javascript
+const withEmotion = (Story, context) => (
+  <>
+    <GlobalStyles />
+    <Story {...context} />
+  </>
+)
+
+export const decorators = [withEmotion]
+```
 
 # TODO:
 
 - Update cypress tests to use typescript
-- Fix storybook
+- Get emotion working with storybook
 - Is `tsconfig.jest.json` still needed?
 - Is `jest-setup.ts` still needed to support testing-library types for jest?

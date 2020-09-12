@@ -13,12 +13,13 @@
     "start": "next start",
     "debug": "NODE_OPTIONS=--inspect next",
     "test": "jest",
-    "storybook": "start-storybook -p 6006 -c .storybook",
+    "storybook": "start-storybook -p 6006",
     "analyze": "ANALYZE=true npm run-script build",
     "lint": "eslint --ext .js,.ts,.tsx ./",
     "deploy": "now",
     "cypress": "cypress open",
-    "ci:verify": "concurrently 'npm:build' 'npm:test' 'npm:lint'"
+    "ci:verify": "concurrently 'npm:build' 'npm:test' 'npm:lint'",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "",
@@ -49,9 +50,13 @@
     "@babel/preset-typescript": "^7.10.4",
     "@next/bundle-analyzer": "^9.5.2",
     "@storybook/addon-a11y": "^6.0.16",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-knobs": "^6.0.16",
-    "@storybook/react": "^6.0.16",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.0.21",
     "@testing-library/cypress": "^6.0.0",
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
@@ -88,7 +93,10 @@
     "prettier": "^2.0.5",
     "react-axe": "^3.5.3",
     "react-docgen-typescript-loader": "^3.7.2",
+    "react-is": "^16.13.1",
+    "storybook": "^6.0.21",
     "ts-jest": "^26.2.0",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.0.2"
   }
 }
