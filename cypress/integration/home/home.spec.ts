@@ -1,7 +1,8 @@
 context("Example of testing the home page", () => {
   beforeEach(() => {
-    cy.wait("4994")
     cy.visit("http://localhost:3000")
+    cy.lighthouse()
+    // cy.injectAxe()
   })
 
   it("finds the home link", () => {

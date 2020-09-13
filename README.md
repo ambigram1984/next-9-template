@@ -56,6 +56,25 @@ After running `npm run analyze`, two static files should be generated (one for s
 
 This project uses the webpack plugin (SVGR)[https://github.com/smooth-code/svgr/tree/master/packages/webpack] to convert svgs to React components. Just add SVGs to `public/svgs/`. It's recommended to wrap these instead of importing them directly to decouple the rest of the prjoect from svgr.
 
+## Debugging
+
+To debug both server and client side code, VS Code provides built in debuggers. To launch them:
+
+1. Server - Add a new terminal; select the drop down; select `Javascript Debug Terminal`. Once selected break points should work for server rendering.
+2. Client - Use `CMD+SHIFT+P` then search `debug: open link`; this should launch a chrome window that respects the debug points.
+
+## Cypress
+
+This project uses Cypress for E2E testing. Some notable plugins used are:
+
+- [cypress-axe]() for a11y testing
+- [cypress-audit](https://github.com/mfrachet/cypress-audit) for a11y and lighthouse testing
+-
+
+# Adding a favicon
+
+This [guide](https://coderrocketfuel.com/article/add-favicon-images-to-a-next-js-website) shows how to generate the icons for each platform.
+
 # Hacks 😭
 
 ## Typescript for Cypress
@@ -120,4 +139,5 @@ export const decorators = [withEmotion]
 
 # TODO:
 
-- Update cypress tests to use typescript
+- Implement a11y / lighthouse into cypress
+- Auto generate site map

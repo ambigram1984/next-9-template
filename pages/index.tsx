@@ -5,6 +5,7 @@ import { NextSeo } from "next-seo"
 import WindowsLogo from "../public/images/windows-95.png"
 
 export default function Home() {
+  const x = 1
   return (
     <Layout>
       <NextSeo
@@ -12,9 +13,10 @@ export default function Home() {
         description="Starter template for Next 9"
       />
       <section>
-        <a href="http://www.google.com">Google Link</a>
         <h1>
-          <ArcadeHeader1>Next 9 Starter Kit</ArcadeHeader1>
+          <ArcadeHeader1>
+            {process.env.NEXT_PUBLIC_WELCOME_MESSAGE}
+          </ArcadeHeader1>
         </h1>
         <img src={WindowsLogo} alt="Windows logo" />
         <h2>
