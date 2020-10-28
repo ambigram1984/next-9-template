@@ -1,23 +1,18 @@
-import { Component } from "react"
-import { NextPageContext } from "next"
+import { useRouter } from "next/router"
+
 import { ArcadeHeader1 } from "../../styles/typography"
 
 interface HelloMessageProps {
   message: string
 }
 
-export default class ImagePost extends Component<HelloMessageProps> {
-  static async getInitialProps({ query }: NextPageContext) {
-    const { message } = query
+export default function ImagePost(props: HelloMessageProps) {
+  const { query = {} } = useRouter()
+  const { message } = query
 
-    return { message }
-  }
-
-  render() {
-    return (
-      <>
-        <ArcadeHeader1>Hello, {`${this.props.message}`}</ArcadeHeader1>
-      </>
-    )
-  }
+  return (
+    <>
+      <ArcadeHeader1>Hello, {`${message}`}</ArcadeHeader1>
+    </>
+  )
 }

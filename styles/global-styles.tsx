@@ -1,4 +1,3 @@
-import * as React from "react"
 import emotionReset from "emotion-reset"
 import { Global, css } from "@emotion/core"
 

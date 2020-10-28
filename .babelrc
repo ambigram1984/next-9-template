@@ -1,18 +1,8 @@
 {
-  "presets": ["next/babel"],
-  "env": {
-    "production": {
-      "plugins": ["emotion"]
-    },
-    "development": {
-      "plugins": [
-        [
-          "emotion",
-          {
-            "sourceMap": true
-          }
-        ]
-      ]
-    }
-  }
+  "presets": [
+    "next/babel",
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+    }]
+  ]
 }
