@@ -29,6 +29,7 @@ These files in place are just meant to be present for the sake of being customiz
 - Next SEO for managing SEO optimizations
 - next-image-optimization to handle images
 - next-fonts for loading custom fonts
+- Github Actions
 
 # Getting Started
 
