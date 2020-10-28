@@ -118,6 +118,8 @@ const withEmotion = (Story, context) => (
 export const decorators = [withEmotion]
 ```
 
+Storybook does not currently work with React 17 (Oct 28, 2020); so the version of `storybook/react` has been set to `@next` as a work around
+
 # TODO:
 
 - Update cypress tests to use typescript

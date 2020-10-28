@@ -11,22 +11,19 @@ module.exports = {
   webpackFinal: (config) => {
     /**
      * TODO: Figure out if this config is still needed
+     * Update: Oct 28: 2020 - This works commented out on an alpha version (updated to work with react 17)
      * https://github.com/storybookjs/storybook/issues/11255
      */
-    config.resolve.alias["core-js/modules"] = path.resolve(
-      __dirname,
-      "..",
-      "node_modules/@storybook/core/node_modules/core-js/modules"
-    )
+    // config.resolve.alias["core-js/modules"] = path.resolve(
+    //   __dirname,
+    //   "..",
+    //   "node_modules/@storybook/core/node_modules/core-js/modules"
+    // )
     /**
-     * TODO: See if storybook supports typescript baseUrl property
+     * Storybook does not support tsconfig
      * https://github.com/storybookjs/storybook/issues/4136
      */
-    config.resolve.plugins.push(
-      new TsconfigPathsPlugin({
-        // configFile: "../tsconfig.json",
-      })
-    )
+    config.resolve.plugins.push(new TsconfigPathsPlugin({}))
     /**
      * Handle loading SVGR components
      */
