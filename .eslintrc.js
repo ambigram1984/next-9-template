@@ -22,7 +22,7 @@ module.exports = {
     },
     "import/resolver": {
       typescript: {
-        directory: ".", // Path to typescript config
+        project: ".", // Path to typescript config
       },
     },
   },

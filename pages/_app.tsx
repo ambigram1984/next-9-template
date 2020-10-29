@@ -1,4 +1,3 @@
-import App from "next/app"
 import { AppProps } from "next/dist/next-server/lib/router/router"
 import dynamic from "next/dynamic"
 
