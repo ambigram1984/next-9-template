@@ -14,9 +14,20 @@ module.exports = {
   },
   globals: {
     "ts-jest": {
-      tsconfig: "tsconfig.jest.json",
-      babelConfig: true,
-      diagnostics: false,
+      tsconfig: {
+        jsx: "react",
+      },
+      babelConfig: {
+        presets: [
+          "next/babel",
+          [
+            "@babel/preset-react",
+            {
+              runtime: "automatic",
+            },
+          ],
+        ],
+      },
     },
   },
 }
