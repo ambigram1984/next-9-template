@@ -1,4 +1,3 @@
-import * as React from "react"
 import { SegaLogo } from "../Icons/Icons"
 import styled from "@emotion/styled"
 import { Link } from "utils/Link"
