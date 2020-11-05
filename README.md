@@ -67,17 +67,11 @@ Cypress [recommends](https://docs.cypress.io/guides/tooling/typescript-support.h
 
 This file imports types for testing library
 
-## tsconfig.jest.json
+## babel-jest.config.js
 
-Currently `ts-jest` has issues when setting:
-
-```json
-  "compilerOptions": {
-    "jsx": "preserve",
-  }
-```
-
-To fix this, `tsconfig.jest.json` is used to handle writing typescript in `*.test.ts(x)` files.
+Babel config that is only used during jest tests. It allows
+- The ability to write tests in ts
+- Not having to import react in every test
 
 ## next-env.d.ts
 
