@@ -1,22 +1,20 @@
-/** @jsx jsx */
+import styled from "@emotion/styled"
 
-import { jsx } from "@emotion/core"
-
-const fontFamilyStyle = {
-  fontFamily: "'ArcadeI', 'Verdana', 'Times'",
-}
-
-const typeStyles = (fontSize: number) => ({
-  ...fontFamilyStyle,
-  color: "violet",
-  fontSize: fontSize + "px",
-  fontWeight: 100,
-})
+const ArcadeType = styled.span<{ fontSize: number }>(
+  {
+    fontFamily: "'ArcadeI', 'Verdana', 'Times'",
+    color: "violet",
+    fontWeight: 100,
+  },
+  (props) => ({
+    fontSize: props.fontSize,
+  })
+)
 
 export function ArcadeHeader1({ children }: React.PropsWithChildren<unknown>) {
-  return <span css={typeStyles(69)}>{children}</span>
+  return <ArcadeType fontSize={69}>{children}</ArcadeType>
 }
 
 export function ArcadeHeader2({ children }: React.PropsWithChildren<unknown>) {
-  return <span css={typeStyles(52)}>{children}</span>
+  return <ArcadeType fontSize={52}>{children}</ArcadeType>
 }

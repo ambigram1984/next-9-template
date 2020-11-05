@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "cypress"],
   "include": ["**/*.ts", "**/*.tsx", "cypress/integration/home/home.js"]
 }

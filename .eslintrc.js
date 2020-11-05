@@ -22,7 +22,7 @@ module.exports = {
     },
     "import/resolver": {
       typescript: {
-        directory: ".", // Path to typescript config
+        project: ".", // Path to typescript config
       },
     },
   },
@@ -43,6 +43,7 @@ module.exports = {
   rules: {
     "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
     "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
     "import/no-default-export": "error",
   },
   overrides: [

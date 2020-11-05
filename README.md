@@ -29,6 +29,7 @@ These files in place are just meant to be present for the sake of being customiz
 - Next SEO for managing SEO optimizations
 - next-image-optimization to handle images
 - next-fonts for loading custom fonts
+- Github Actions
 
 # Getting Started
 
@@ -66,17 +67,11 @@ Cypress [recommends](https://docs.cypress.io/guides/tooling/typescript-support.h
 
 This file imports types for testing library
 
-## tsconfig.jest.json
+## babel-jest.config.js
 
-Currently `ts-jest` has issues when setting:
-
-```json
-  "compilerOptions": {
-    "jsx": "preserve",
-  }
-```
-
-To fix this, `tsconfig.jest.json` is used to handle writing typescript in `*.test.ts(x)` files.
+Babel config that is only used during jest tests. It allows
+- The ability to write tests in ts
+- Not having to import react in every test
 
 ## next-env.d.ts
 
@@ -117,6 +112,8 @@ const withEmotion = (Story, context) => (
 
 export const decorators = [withEmotion]
 ```
+
+Storybook does not currently work with React 17 (Oct 28, 2020); so the version of `storybook/react` has been set to `@next` as a work around
 
 # TODO:
 
