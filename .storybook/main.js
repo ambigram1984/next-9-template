@@ -14,11 +14,11 @@ module.exports = {
      * Update: Oct 28: 2020 - This works commented out on an alpha version (updated to work with react 17)
      * https://github.com/storybookjs/storybook/issues/11255
      */
-    // config.resolve.alias["core-js/modules"] = path.resolve(
-    //   __dirname,
-    //   "..",
-    //   "node_modules/@storybook/core/node_modules/core-js/modules"
-    // )
+    config.resolve.alias["core-js/modules"] = path.resolve(
+      __dirname,
+      "..",
+      "node_modules/@storybook/core/node_modules/core-js/modules"
+    )
     /**
      * Storybook does not support tsconfig
      * https://github.com/storybookjs/storybook/issues/4136
