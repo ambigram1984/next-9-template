@@ -44,7 +44,6 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
-
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@next/bundle-analyzer": "^9.5.5",
     "@storybook/addon-a11y": "^6.0.28-alpha.0",

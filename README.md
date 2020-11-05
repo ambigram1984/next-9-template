@@ -57,6 +57,10 @@ After running `npm run analyze`, two static files should be generated (one for s
 
 This project uses the webpack plugin (SVGR)[https://github.com/smooth-code/svgr/tree/master/packages/webpack] to convert svgs to React components. Just add SVGs to `public/svgs/`. It's recommended to wrap these instead of importing them directly to decouple the rest of the prjoect from svgr.
 
+## Updated deps
+
+Use `npm outdated` to check if latest packages are installed.
+
 # Hacks 😭
 
 ## Typescript for Cypress
